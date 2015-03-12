@@ -1,0 +1,13 @@
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\bin\Debug\CsharpTpCppConverterTests.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\bin\Debug\CsharpTpCppConverterTests.pdb
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\bin\Debug\CsharpToCppConverter.exe
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\bin\Debug\CsharpToCppConverterCore.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\bin\Debug\StyleCop.CSharp.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\bin\Debug\StyleCop.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\bin\Debug\CsharpToCppConverter.pdb
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\bin\Debug\CsharpToCppConverterCore.pdb
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\obj\Debug\CsharpTpCppConverterTests.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\obj\Debug\CsharpTpCppConverterTests.Properties.Resources.resources
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\obj\Debug\CsharpTpCppConverterTests.csproj.GenerateResource.Cache
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\obj\Debug\CsharpTpCppConverterTests.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpTpCppConverterTests\obj\Debug\CsharpTpCppConverterTests.pdb

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema
+      Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml" />
+    <AvailableItemName Include="CsCppConverter">
+      <Targets>_CsCppConverter</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+      $(ComputeLinkInputsTargets);
+      ComputeCsCppConverterOutput;
+    </ComputeLinkInputsTargets>
+  </PropertyGroup>
+  <UsingTask
+    TaskName="CsCppConverter"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target
+    Name="_CsCppConverter"
+    BeforeTargets="$(CsCppConverterBeforeTargets)"
+    AfterTargets="$(CsCppConverterAfterTargets)"
+    Condition="'@(CsCppConverter)' != ''"
+    Outputs="@(CsCppConverter-&gt;'%(Outputs)')"
+    Inputs="@(CsCppConverter);@(CsCppConverter->'%(AdditionalDependencies)');$(MSBuildProjectFile)"
+    DependsOnTargets="$(CsCppConverterDependsOn)">
+    <ItemGroup Condition="'@(SelectedFiles)' != ''">
+      <CsCppConverter Remove="@(CsCppConverter)" Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <CsCppConverter_tlog Include="%(CsCppConverter.Outputs)" Condition="'%(CsCppConverter.Outputs)' != '' and '%(CsCppConverter.ExcludedFromBuild)' != 'true'">
+        <Source>@(CsCppConverter, '|')</Source>
+      </CsCppConverter_tlog>
+    </ItemGroup>
+    <ItemGroup>
+      <CsCppConverter_ComponentModules Include="@(ReferencePath)" Condition="'%(CsCppConverter.UseDefaultComponentModules)' == 'true'" />
+      <CsCppConverter_ComponentModules Include="%(CsCppConverter.ComponentModules)" />
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(CsCppConverter.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(CsCppConverter_tlog)' != '' and '%(CsCppConverter_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(TLogLocation)$(ProjectName).write.1.tlog"
+      Lines="^%(CsCppConverter_tlog.Source);@(CsCppConverter_tlog-&gt;'%(Fullpath)')"/>
+    <CsCppConverter
+      Condition="'@(CsCppConverter)' != '' and '%(CsCppConverter.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(CsCppConverter.CommandLineTemplate)"
+      NoLogo="%(CsCppConverter.NoLogo)"
+      SourceDirectory="%(CsCppConverter.SourceDirectory)"
+      LibraryWinRTDirectories="%(CsCppConverter.LibraryWinRTDirectories)"
+      AdditionalOptions="%(CsCppConverter.AdditionalOptions)"
+      Inputs="@(CsCppConverter)" />
+    <ItemGroup>
+      <CsCppConverter_ComponentModules Remove="@(CsCppConverter_ComponentModules)" />
+    </ItemGroup>
+  </Target>
+  <Target
+    Name="ComputeCsCppConverterOutput"
+    Condition="'@(CsCppConverter)' != ''">
+    <ItemGroup>
+      <_EmbedManagedResourceFile Include="@(CsCppConverter->Metadata('Outputs')->Distinct()->ClearMetadata())" Condition="'%(CsCppConverter.ExcludedFromBuild)' != 'true'"/>
+    </ItemGroup>
+  </Target>
+</Project>

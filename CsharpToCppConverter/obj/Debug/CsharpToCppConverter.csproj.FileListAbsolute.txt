@@ -1,0 +1,6 @@
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverter\bin\Debug\CsharpToCppConverterCore.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverter\bin\Debug\CsharpToCppConverterCore.pdb
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverter\bin\Debug\StyleCop.CSharp.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverter\bin\Debug\StyleCop.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverter\obj\Debug\CsharpToCppConverterCore.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverter\obj\Debug\CsharpToCppConverterCore.pdb

@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpToCppConverter", "CsharpToCppConverter\CsharpToCppConverter.csproj", "{A305845E-308B-4DDE-A786-EE9D97B9E38D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpToCppConverterCmdLine", "CsharpToCppConverterCmdLine\CsharpToCppConverterCmdLine.csproj", "{BA2C86AC-EC8B-47BA-B933-1A93E3434627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpTpCppConverterTests", "CsharpTpCppConverterTests\CsharpTpCppConverterTests.csproj", "{A7187643-C3A1-45A8-8EBA-F354770D95EA}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "CsCppSetup", "CsCppSetup\CsCppSetup.wixproj", "{3907CE8B-714D-4316-AAAF-98DB6164BEF8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D} = {A305845E-308B-4DDE-A786-EE9D97B9E38D}
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627} = {BA2C86AC-EC8B-47BA-B933-1A93E3434627}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSBuildCustomization", "MSBuildCustomization", "{EC318821-DD66-4A08-BCAC-4DA1450E84F2}"
+	ProjectSection(SolutionItems) = preProject
+		MSBuildCustomization\cscpp.props = MSBuildCustomization\cscpp.props
+		MSBuildCustomization\cscpp.targets = MSBuildCustomization\cscpp.targets
+		MSBuildCustomization\cscpp.xml = MSBuildCustomization\cscpp.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://alexdevhouse.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CsharpToCppConverter\\CsharpToCppConverter.csproj
+		SccProjectName1 = CsharpToCppConverter
+		SccLocalPath1 = CsharpToCppConverter
+		SccProjectUniqueName2 = CsharpToCppConverterCmdLine\\CsharpToCppConverterCmdLine.csproj
+		SccProjectName2 = CsharpToCppConverterCmdLine
+		SccLocalPath2 = CsharpToCppConverterCmdLine
+		SccProjectUniqueName3 = CsharpTpCppConverterTests\\CsharpTpCppConverterTests.csproj
+		SccProjectName3 = CsharpTpCppConverterTests
+		SccLocalPath3 = CsharpTpCppConverterTests
+		SccProjectUniqueName4 = CsCppSetup\\CsCppSetup.wixproj
+		SccProjectName4 = CsCppSetup
+		SccLocalPath4 = CsCppSetup
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A305845E-308B-4DDE-A786-EE9D97B9E38D}.Release|x86.ActiveCfg = Release|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BA2C86AC-EC8B-47BA-B933-1A93E3434627}.Release|x86.ActiveCfg = Release|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A7187643-C3A1-45A8-8EBA-F354770D95EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{3907CE8B-714D-4316-AAAF-98DB6164BEF8}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3907CE8B-714D-4316-AAAF-98DB6164BEF8}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{3907CE8B-714D-4316-AAAF-98DB6164BEF8}.Debug|x86.ActiveCfg = Debug|x86
+		{3907CE8B-714D-4316-AAAF-98DB6164BEF8}.Debug|x86.Build.0 = Debug|x86
+		{3907CE8B-714D-4316-AAAF-98DB6164BEF8}.Release|Any CPU.ActiveCfg = Release|x86
+		{3907CE8B-714D-4316-AAAF-98DB6164BEF8}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{3907CE8B-714D-4316-AAAF-98DB6164BEF8}.Release|Mixed Platforms.Build.0 = Release|x86
+		{3907CE8B-714D-4316-AAAF-98DB6164BEF8}.Release|x86.ActiveCfg = Release|x86
+		{3907CE8B-714D-4316-AAAF-98DB6164BEF8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

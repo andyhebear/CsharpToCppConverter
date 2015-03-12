@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup
+    Condition="'$(CsCppConverterBeforeTargets)' == '' and '$(CsCppConverterAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <CsCppConverterBeforeTargets>ClCompile</CsCppConverterBeforeTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CsCppConverterDependsOn Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;ResolveAssemblyReferences;$(CsCppConverterDependsOn)</CsCppConverterDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <CsCppConverter>
+      <NoLogo>true</NoLogo>
+      <SourceDirectory>$(MSBuildProjectDirectory)</SourceDirectory>
+	  <LibraryWinRTDirectories>$(WindowsSDK_MetadataPath);$(VSInstallDir_110)VC\vcpackages</LibraryWinRTDirectories>
+      <CommandLineTemplate>"C:\Program Files (x86)\CsCppUtility\CsCpp.exe" [AllOptions] [AdditionalOptions] [Inputs]</CommandLineTemplate>
+      <Outputs>%(SourceDirectory)\%(Identity).cpp;%(SourceDirectory)\%(Identity).h</Outputs>
+      <UseDefaultComponentModules>true</UseDefaultComponentModules>
+      <ExecutionDescription>Generating C++ files for %(Identity)...</ExecutionDescription>
+    </CsCppConverter>
+  </ItemDefinitionGroup>
+</Project>

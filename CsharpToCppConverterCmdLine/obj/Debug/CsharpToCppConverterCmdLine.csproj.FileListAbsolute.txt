@@ -1,0 +1,10 @@
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\bin\Debug\CsharpToCppConverter.exe.config
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\bin\Debug\CsharpToCppConverter.exe
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\bin\Debug\CsharpToCppConverter.pdb
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\bin\Debug\CsharpToCppConverterCore.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\bin\Debug\StyleCop.CSharp.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\bin\Debug\StyleCop.dll
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\bin\Debug\CsharpToCppConverterCore.pdb
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\obj\Debug\CsharpToCppConverterCmdLine.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\obj\Debug\CsharpToCppConverter.exe
+C:\Users\Alexander\Documents\Visual Studio 2012\Projects\CsharpToCppConverter\CsharpToCppConverterCmdLine\obj\Debug\CsharpToCppConverter.pdb

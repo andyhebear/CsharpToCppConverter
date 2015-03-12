@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="C# to C++ /CX Converter" Language="1033" Version="0.0.0.3" Manufacturer="Mr O. Duzhar" UpgradeCode="677F4614-B0D8-4896-9194-07D489216EA6">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <!--<MediaTemplate />-->
+
+    <Media Id="1" EmbedCab="yes" Cabinet="CsCppSetup_cab" />
+
+    <Feature Id="ProductFeatureCsCpp" Title="Command Line Utility" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+
+    <Feature Id="ProductFeatureMsCppBuildFiles" Title="MSBuild Customization" Level="1">
+      <ComponentGroupRef Id="MSBuildCustomizations" />
+    </Feature>
+
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="CsCppUtility" />
+        <Directory Id="MSBuild" Name="MSBuild">
+          <Directory Id="MicrosoftCpp" Name="Microsoft.Cpp">
+            <Directory Id="v4" Name="v4.0">
+              <Directory Id="V110" Name="V110">
+                <Directory Id="MSBUILD_INSTALLFOLDER" Name="BuildCustomizations" />
+              </Directory>
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="ProductComponent" Guid="FB32D057-087E-455A-84FD-07CE49F1537A">
+        <!-- TODO: Insert files, registry keys, and other resources here. -->
+        <File Id='CsCppEXE' Name='CsCpp.exe' DiskId='1' Source='..\..\..\CsharpToCppConverterCmdLine\bin\$(var.Configuration)\CsharpToCppConverter.exe' KeyPath='yes' />
+        <File Id='CsCppExeConfig' Name='CsCpp.exe.config' DiskId='1' Source='..\..\..\CsharpToCppConverterCmdLine\bin\$(var.Configuration)\CsharpToCppConverter.exe.config' />
+        <File Id='CsharpToCppConverterCoreDLL' Name='CsharpToCppConverterCore.dll' DiskId='1' Source='..\..\..\CsharpToCppConverterCmdLine\bin\$(var.Configuration)\CsharpToCppConverterCore.dll' />
+        <File Id='StyleCopDLL' Name='StyleCop.dll' DiskId='1' Source='..\..\..\CsharpToCppConverterCmdLine\bin\$(var.Configuration)\StyleCop.dll' />
+        <File Id='StyleCopCSharpDLL' Name='StyleCop.CSharp.dll' DiskId='1' Source='..\..\..\CsharpToCppConverterCmdLine\bin\$(var.Configuration)\StyleCop.CSharp.dll' />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="MSBuildCustomizations" Directory="MSBUILD_INSTALLFOLDER">
+      <Component Id="MSBuildCustomization" Guid="99732773-2101-4557-A401-D18EAB8F2749">
+        <!-- TODO: Insert files, registry keys, and other resources here. -->
+        <File Id='cscppProps' Name='cscpp.props' DiskId='1' Source='..\..\..\MSBuildCustomization\cscpp.props' KeyPath='yes' />
+        <File Id='cscppTargets' Name='cscpp.targets' DiskId='1' Source='..\..\..\MSBuildCustomization\cscpp.targets' />
+        <File Id='cscppXml' Name='cscpp.xml' DiskId='1' Source='..\..\..\MSBuildCustomization\cscpp.xml' />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+</Wix>

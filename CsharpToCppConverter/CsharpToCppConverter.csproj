@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A305845E-308B-4DDE-A786-EE9D97B9E38D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Converters</RootNamespace>
+    <AssemblyName>CsharpToCppConverterCore</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/CsharpToCppConverter/CsharpToCppConverter/CsharpToCppConverter</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://alexdevhouse.visualstudio.com/defaultcollection</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>0612 0618</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="StyleCop, Version=4.7.1000.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\StyleCop 4.7\StyleCop.dll</HintPath>
+    </Reference>
+    <Reference Include="StyleCop.CSharp, Version=4.7.1000.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\StyleCop 4.7\StyleCop.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\TypeDefinitionMetadataICodeElementAdapterBase.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorCallingConvention.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorElementType.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorEventAttr.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorFieldAttr.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorMethodAttr.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorMethodImpl.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorPinvokeMap.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorPropertyAttr.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorTokenType.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorTypeAttr.cs" />
+    <Compile Include="ComInterfaces\Extentions.cs" />
+    <Compile Include="ComInterfaces\IMetaDataAssemblyImport.cs" />
+    <Compile Include="ComInterfaces\IMetadataDispenserEx.cs" />
+    <Compile Include="ComInterfaces\IMetaDataImport.cs" />
+    <Compile Include="ClassContext.cs" />
+    <Compile Include="CXXConverterLogic.cs" />
+    <Compile Include="CxxHeaderToCSharpDummyInterpreter.cs" />
+    <Compile Include="ComInterfaces\MetadataEnums\CorParamAttr.cs" />
+    <Compile Include="Dictionaries\CsTypesToCppTypes.cs" />
+    <Compile Include="Dictionaries\FullyQualifiedNames.cs" />
+    <Compile Include="Dtos\Event.cs" />
+    <Compile Include="Dtos\Field.cs" />
+    <Compile Include="Dtos\IFullName.cs" />
+    <Compile Include="Dtos\Member.cs" />
+    <Compile Include="Dtos\Method.cs" />
+    <Compile Include="Dtos\ModuleReference.cs" />
+    <Compile Include="Dtos\Param.cs" />
+    <Compile Include="Dtos\Property.cs" />
+    <Compile Include="Dtos\TypeDefinition.cs" />
+    <Compile Include="Dtos\TypeDescriptor.cs" />
+    <Compile Include="Dtos\TypeReference.cs" />
+    <Compile Include="Dtos\TypeSpecification.cs" />
+    <Compile Include="Enums\SaveICodeUnit.cs" />
+    <Compile Include="Enums\SaveVariablesMode.cs" />
+    <Compile Include="Enums\SavingOptions.cs" />
+    <Compile Include="Extentions\CodePart.cs" />
+    <Compile Include="Extentions\CsElementExtentions.cs" />
+    <Compile Include="Extentions\NamespaceNodeExtentions.cs" />
+    <Compile Include="FullyQualifiedNamesCache.cs" />
+    <Compile Include="INamesResolver.cs" />
+    <Compile Include="Adapters\EventMetadataICodeElementAdapter.cs" />
+    <Compile Include="Adapters\FieldMetadataICodeElementAdapter.cs" />
+    <Compile Include="Adapters\MetadataICodeElementAdapter.cs" />
+    <Compile Include="Metadata\MetadataReader.cs" />
+    <Compile Include="Adapters\MethodMetadataICodeElementAdapter.cs" />
+    <Compile Include="Adapters\PropertyMetadataICodeElementAdapter.cs" />
+    <Compile Include="Adapters\TypeDefinitionMetadataICodeElementAdapter.cs" />
+    <Compile Include="Metadata\SignatureBlobReader.cs" />
+    <Compile Include="TypeResolver.cs" />
+    <Compile Include="SharpToCppInterpreter.cs" />
+    <Compile Include="SharpToCppConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharpToCppConverterHelper.cs" />
+    <Compile Include="CodeText.cs" />
+    <Compile Include="ExpressionReturnTypeResolver.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
